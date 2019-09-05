@@ -2,6 +2,9 @@
 #include <stdlib.h>
 using namespace std ;
 float A,B,C,D,x,y,z;
+
+void fermeture();
+
 void main()
 {
 
@@ -35,9 +38,7 @@ if ( A == 0)
 {
          float w =  ( -  C ) / B;
          cout<<"la solution est:  "<<w<<"\n";
-         
-         cout<<"au revoir\n";
-	     system("pause");
+         fermeture ();
          return 0;
 }
 
@@ -47,9 +48,7 @@ if ( D >= 0 )
 		float z = ( B - d ) / ( 2 * A );
 		float y = ( B + d ) / ( 2 * A );
         cout<<"les deux solutions sont:          "<<z<<"  et   "<<y<<"\n";
-        
-        cout<<"au revoir\n";
-	    system("pause");
+        fermeture();
         return 0;
 	}
 
@@ -57,18 +56,22 @@ if (D == 0)
 	{
 		float x = B / 2 * A;
 		cout<<"la solution est une racine double et de valeur  "<<z<<"\n";
-
-          cout<<"au revoir\n";
-	       system("pause");
+         fermeture() ;
          return 0;
 	}
 
 if (D <= 0)
 	{
-          cout<<"au revoir\n";
-	      system("pause");
+         fermeture();
          return 0;
 	}
 
 }
 
+//Fonction ajoutée.
+void fermeture()
+{
+        cout<<"au revoir\n";
+		system("pause");
+
+}
